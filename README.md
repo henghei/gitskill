@@ -1,5 +1,39 @@
+请由下及上参阅（方便笔者书写与调试）
+=
+***
+## 表格
+> arkdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。
+> 1. -: 设置内容和标题栏居右对齐。
+> 2. :- 设置内容和标题栏居左对齐
+> 3. :-: 设置内容和标题栏居中对齐。  
 
+表头| 表头| 表头| 表头| 表头 
+:-|:-:|-:|:-|:-:
+左对齐|中对齐|右对齐|左对齐|中对齐
+左对齐|中对齐|右对齐|左对齐|中对齐
+左对齐|中对齐|右对齐|左对齐|中对齐
+左对齐|中对齐|右对齐|左对齐|中对齐
+左对齐|中对齐|右对齐|左对齐|中对齐
 
+## 高级链接（变量赋值前一定要加空行）
+链接到 [cnode][1]  
+链接到 [w3school][2]  
+
+[1]: https://cnodejs.org    
+[2]: https://www.w3school.com.cn    
+## 代码
+1. 代码片段（反引号包围``）    
+`console.log('test')`
+2. 代码区块（前加四个空格或三个反引号包裹）   
+function test(){    
+    console.log('abc')  
+    }
+3. javascript
+```javascript
+function test(){    
+console.log('abc')  
+}   
+```
 
 ## 脚注（无法实现）
 [^脚注]:我们总以为，是生活欠我们一个“满意”，其实是我们欠生活一个“努力”。
@@ -44,9 +78,17 @@ ___粗体斜体___
     >你好吗  
     >你好吗  
  * 第二项
-## 插入图片或链接
-[github](https://github.com)
-![Cnode UserAvatar](https://avatars2.githubusercontent.com/u/14975630?v=4&s=120)
+## 插入图片或链接  
+    ![alt 属性文本](图片地址 "可选标题")或者也可以像高级链接那样使用
+ 
+[github](https://github.com)    
+![Cnode UserAvatar](https://avatars2.githubusercontent.com/u/14975630?v=4&s=120 'Cnode UserAvatar')  
+>  高级链接模板
+>> 链接到[github][1]  
+>> 链接到[cnode userAvatar][2]
+
+[1]: https://github.com 
+[2]: https://avatars2.githubusercontent.com/u/14975630?v=4&s=120
 ## 无序列表（可以是星号、加号、减号）
 * 列表一
 * 列表一
@@ -70,7 +112,7 @@ ___粗体斜体___
     + 列表一 
     + 列表一 
 2. 第二项
-    - 列表一 
+- 列表一 
     - 列表一  
     - 列表一 
     - 列表一 
