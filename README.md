@@ -1,6 +1,26 @@
 请由下及上参阅（方便笔者书写与调试）
 =
 ***
+## sublime3下实现Markdown的实时自动刷新预览（Markdown Preveiw+LiveReload）
+* Ctrl+Shift+p（调用命令面板）、输入PCIP（Package Control:Install Package）回车、输入MP（Markdowm Preview），下载并安装
+* Markdown Preview默认没有快捷键，我们可以为其设置快捷键  
+        1. Preferences -> Key Bindings打开的文件的右侧栏的中括号中添加一行代码    
+```
+{ "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"}  }
+```  
+      2. 打开其配置文件 Preferences -> Package Settings -> Markdown Preview -> Settings，检查左侧enable_autoreload
+      条目是否为true，若是，跳过。若不是，右侧栏加一条下面这个后重启Sublime:
+```
+{
+    "enable_autoreload": true
+}
+```
+* 安装并配置LiveReload  
+       1. Ctrl+Shift+p（调用命令面板）、输入PCIP（Package Control:Install Package）回车、输入LiveReload，下载并安装  
+      2. 安装成功后, 再次Ctrl+shift+p, 输入LiveReload: Enable/disable plug-ins, 回车, 选择 Simple Reload with 
+         delay (400ms)或者Simple Reload，两者的区别仅仅在于后者没有延迟。  
+      3.  安装完毕重启sublime3，新建一个.md文件测试，快捷键Alt+m,调出浏览器预览
+*  __注意：__ 每次重启后发现不能够实时刷新了，需要重新ctrl + shift + p 找到 livereload 重新选择 加载 !!!
 ## 表格
 > arkdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。
 > 1. -: 设置内容和标题栏居右对齐。
